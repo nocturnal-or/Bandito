@@ -1,13 +1,17 @@
-# Bandito
+# Bandito 
 Bandito is monitoring system that provides a Nagios like UI to monitor the TOR network in its entirety.   
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You need to be somewhat conversant with Ansible, Tor, Nagios and Linux.
+
+Have a vanilla CentOS7/RHEL7 system at your disposal.
+
+You will also need a TOR Relay configured 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need a tor relay 
 
 ```
 Give examples
@@ -20,7 +24,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+ansible-playbook site_bandito.yml
 ```
 
 And repeat
@@ -70,8 +74,8 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+nocturnal-or
+* **Nocturnal-or** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -81,6 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* The TOR Project. Please consider donating to them: https://donate.torproject.org/
