@@ -7,7 +7,7 @@ You need to be somewhat conversant with Ansible, Tor, Nagios and Linux.
 
 Have a vanilla CentOS7/RHEL7 system at your disposal.
 
-[You will also need a TOR Relay configured and be able to connect to via a script.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+[You will also need a TOR Relay configured and be able to connect to it via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Prerequisites
 
