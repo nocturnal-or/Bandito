@@ -7,7 +7,7 @@ You need to be somewhat conversant with Ansible, Tor, Nagios and Linux.
 
 Have a vanilla CentOS7/RHEL7 system at your disposal.
 
-You will also need a TOR Relay configured 
+[You will also need a TOR Relay configured and be able to connect to via a script.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Prerequisites
 
@@ -74,8 +74,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
-nocturnal-or
-* **Nocturnal-or** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Nocturnal** - *Initial work* - [nocturnal-or](https://github.com/nocturnal-or)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
