@@ -60,7 +60,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 * **Nocturnal** - *Initial work* - [nocturnal-or](https://github.com/nocturnal-or)
 
-**Nocturnal** is available for consultation, and resides in Canberra, Australia. Please make contact via github. 
+**Nocturnal** is available for consultation, and resides in Canberra, Australia. Please make contact via Github (GPG public key available on profile). 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
