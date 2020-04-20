@@ -1,5 +1,5 @@
 # Bandito 
-Bandito is monitoring system that provides a Nagios like UI to monitor the TOR network in its entirety.   
+Bandito is monitoring system that utilises Nagios to monitor the TOR network in its entirety.   
 
 ## Getting Started
 
@@ -7,63 +7,49 @@ You need to be somewhat conversant with Ansible, Tor, Nagios and Linux.
 
 Have a vanilla CentOS7/RHEL7 system at your disposal.
 
-[You will also need a TOR Relay configured and be able to connect to it via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+[You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Prerequisites
 
-You will need a tor relay 
+Have a vanilla CentOS7/RHEL7 system ready, preferably a minimal install, and with Ansible installed.
+
+Install ansible as per the following:
 
 ```
-Give examples
+yum install ansible -y
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+1. Clone this repo
 
-Say what the step will be
+2. There are variable definitions required prior to install:
+
+See the following file
+
+```
+vars/main.yml
+```
+
+3. To build the system, run the following:
 
 ```
 ansible-playbook site_bandito.yml
 ```
 
-And repeat
+4. Upon building, using the http_access credentials you defined in vars/main.yml, navigate a web browswer to:
 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+http[s]://<server_name>>/bandito
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Upon building, using the http_access credentials you defined in vars/main.yml, open a web browswer to 
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```
+http[s]://<server_name>>/bandito
+```
 
 ## Contributing
 
@@ -76,6 +62,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 * **Nocturnal** - *Initial work* - [nocturnal-or](https://github.com/nocturnal-or)
 
+**Nocturnal** is available for consultation, and resides in Canberra, Australia. Please contact via github. 
+
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
@@ -84,4 +72,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* The TOR Project. Please consider donating to them: https://donate.torproject.org/
+* The TOR Project. Please consider making a donation: https://donate.torproject.org/
