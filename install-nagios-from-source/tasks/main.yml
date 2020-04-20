@@ -1,0 +1,104 @@
+---
+
+#################################################
+# Nagios 
+
+- name: Install nagios deps
+  yum:
+          name: "{{ item }}"
+          state: present
+  with_items:
+  - rsync
+  - "@development"
+  - httpd
+  - php.x86_64
+
+- name: Reload http
+  service:
+   name: httpd
+   state: started
+   enabled: true
+
+- name: Opening HTTP port
+  firewalld:
+    service: http
+    immediate: yes
+    permanent: yes
+    state: enabled
+
+- name: Start http
+  service:
+   name: httpd
+   state: started
+   enabled: true
+
+#################################################
+# Nagios 
+
+- name: Adding group nagios
+  group:
+    name: nagios
+    state: present
+
+- name: Add nagios user 
+  user:
+    name: nagios
+    group: nagios
+
+- name: Synchronization nagios and plugins
+  synchronize:
+    src: "{{ item }}"
+    dest: /root
+  with_items:
+  - "{{ nagios_tar_gz }}"
+  - "{{ nagios_plugins }}"
+
+- name: Unarchive the nagios and plugins 
+  unarchive:
+    src: /root/{{ item }}
+    dest: /root
+    remote_src: yes
+  with_items:
+  - "{{ nagios_tar_gz }}"
+  - "{{ nagios_plugins }}"
+
+- name: Building Nagios from source
+  shell: cd /root/{{ nagios_src_dir }} && ./configure && make clean && make && make all && make fullinstall && make install-config && make install install-html
+
+- name: Building and installing Nagios plugins from source 
+  shell: cd /root/{{ nagios_plugins_src_dir }} && ./configure && make && make install
+
+- name: Creating nagios conf.d directory
+  file:
+    path: /usr/local/nagios/etc/conf.d
+    state: directory
+    owner: nagios
+    group: nagios
+    mode: '0755'
+  notify: restart-nagios
+
+- name: Adding nagios user into basic auth
+  shell: htpasswd -bc /usr/local/nagios/etc/htpasswd.users milk cookies
+  notify: restart-httpd
+
+- name: Copying our nagios configuration 
+  copy:
+    src: nagios.cfg
+    dest: /usr/local/nagios/etc/
+    owner: nagios
+    group: nagios
+  notify: restart-nagios
+
+- name: Copying our cgi configuration
+  copy:
+   src: cgi.cfg
+   dest: /usr/local/nagios/etc/
+   owner: nagios
+   group: nagios
+  notify: restart-nagios
+
+- name: Start nagios
+  service:
+   name: nagios
+   state: started
+   enabled: true

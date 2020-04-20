@@ -1,0 +1,16 @@
+---
+# tasks file for common
+
+- name: Set timezone to {{ TIMEZONE }}
+  timezone:
+    name: "{{ TIMEZONE }}"
+
+- name: Updating system
+  yum:
+    name: '*'
+    state: latest
+
+- name: Switching on SELinux
+  selinux:
+    policy: targeted
+    state: enforcing

@@ -1,0 +1,17 @@
+---
+########################################
+# Set Timezone
+
+TIMEZONE: "Australia/Sydney"
+
+########################################
+# Nagios Specific varibles
+
+NAGIOS_VERSION: "4.4.5"
+NAGIOS_PLUGINS_VERSION: "2.2.1"
+
+NAGIOS_SRC_DIR: "nagios-{{ NAGIOS_VERSION }}"
+NAGIOS_TAR_GZ: "nagios-{{ NAGIOS_VERSION }}.tar.gz"
+
+NAGIOS_PLUGINS_SRC_DIR: "nagios-plugins-{{ NAGIOS_PLUGINS_VERSION }}"
+NAGIOS_PLUGINS_TAR_GZ: "nagios-plugins-{{ NAGIOS_PLUGINS_VERSION }}.tar.gz"

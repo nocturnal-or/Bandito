@@ -1,0 +1,9 @@
+---
+- name: Installing Bandito - A monitoring system that utilises Nagios to monitor the TOR network in its entirety. 
+  hosts: all
+  become: true
+  tasks:
+        - include_vars: vars.yml
+  roles:
+        - common
+

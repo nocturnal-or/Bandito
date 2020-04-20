@@ -1,0 +1,19 @@
+---
+- name: Opening HTTP port
+  firewalld:
+    service: http
+    immediate: yes
+    permanent: yes
+    state: enabled
+
+- name: Adding nagios user
+  shell: htpasswd -bc /usr/local/nagios/etc/htpasswd.users milk cookies
+  notify: restart-httpd
+
+- name: Reload http
+  service:
+   name: httpd
+   state: started
+   enabled: true
+
+

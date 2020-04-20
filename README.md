@@ -29,10 +29,10 @@ git clone https://github.com/nocturnal-or/Bandito.git
 * See the following (well documented) file:
 
 ```
-./vars/main.yml
+./vars.yml
 ```
 
-3. Specify the IP address of your vanilla CentOS7 system.
+3. Specify the IP address(es) of your sytem(s).
 
 * See the following (well documented) file:
 
