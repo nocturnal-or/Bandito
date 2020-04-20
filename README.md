@@ -13,8 +13,8 @@ You need to be conversant with Ansible, Tor (running a middle relay), Nagios and
 yum install ansible -y
 ```
 
-* [You will also need a TOR Relay configured](https://community.torproject.org/relay/setup/guard/centosrhel/)
-* [Have the relay connectable via STEM](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+* [Have a TOR middle relay running](https://community.torproject.org/relay/setup/guard/centosrhel/)
+* [Be able to connect to the relay via STEM](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Installing
 
