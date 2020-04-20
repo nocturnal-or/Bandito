@@ -3,7 +3,7 @@ Bandito is monitoring system that utilises Nagios to monitor the TOR network in 
 
 ## Getting Started
 
-You need to be conversant with Ansible, Tor (running a relay), Nagios and CentOS7 Linux.
+You need to be conversant with Ansible, Tor (running a middle relay), Nagios and CentOS7 Linux.
 
 ### Prerequisites
 
@@ -13,7 +13,8 @@ You need to be conversant with Ansible, Tor (running a relay), Nagios and CentOS
 yum install ansible -y
 ```
 
-* [You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+* [You will also need a TOR Relay configured](https://community.torproject.org/relay/setup/guard/centosrhel/)
+* [Have the relay connectable via STEM](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Installing
 
