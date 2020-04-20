@@ -7,7 +7,7 @@ You need to be conversant with Ansible, Tor (running a middle relay), Nagios and
 
 ### Prerequisites
 
-* Have a vanilla CentOS7 system at your disposal (with ansible installed), e.g.
+* Have a vanilla CentOS7 system at your disposal (with ansible installed and configured), e.g.
 
 ```
 yum install ansible -y
