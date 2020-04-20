@@ -3,6 +3,9 @@
   hosts: all
   become: true
   tasks:
+        - debug:
+                msg: Remember to setup variables in var.yml or you'll get no where...
+
         - include_vars: vars.yml
   roles:
         - common
