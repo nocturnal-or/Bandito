@@ -26,20 +26,24 @@ git clone https://github.com/nocturnal-or/Bandito.git
 
 2. Setup the appropriate variable definitions prior to building:
 
-See the following (well documented) files:
+* See the following (well documented) file:
 
 ```
 ./vars/main.yml
 ```
 
+3. Specify the IP address of your vanilla CentOS7 system.
+
+* See the following (well documented) file:
+
 ```
 ./hosts
 ```
 
-3. To build the system, run the following:
+4. To build the system, run the following:
 
 ```
-ansible-playbook site_bandito.yml
+ansible-playbook site_bandito.yml -i hosts
 ```
 
 ## Deployment
