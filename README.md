@@ -26,10 +26,14 @@ git clone https://github.com/nocturnal-or/Bandito.git
 
 2. Setup the appropriate variable definitions prior to building:
 
-See the following (well documented) file:
+See the following (well documented) files:
 
 ```
-vars/main.yml
+./vars/main.yml
+```
+
+```
+./hosts
 ```
 
 3. To build the system, run the following:
