@@ -3,11 +3,9 @@ Bandito is monitoring system that utilises Nagios to monitor the TOR network in 
 
 ## Getting Started
 
-You need to be conversant with Ansible, Tor, Nagios and CentOS7 Linux.
+You need to be conversant with Ansible, Tor (running a relay), Nagios and CentOS7 Linux.
 
 ### Prerequisites
-
-* You need to be conversant with Ansible, Tor (running a relay), Nagios and general Linux administration.
 
 * Have a vanilla CentOS7 system at your disposal (with ansible installed), e.g.
 
@@ -27,7 +25,7 @@ git clone https://github.com/nocturnal-or/Bandito.git
 
 2. Setup the appropriate variable definitions prior to building:
 
-See the following (well documented) file
+See the following (well documented) file:
 
 ```
 vars/main.yml
