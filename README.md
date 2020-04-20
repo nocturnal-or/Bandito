@@ -1,5 +1,5 @@
 # Bandito 
-Bandito is monitoring system that utilises Nagios to monitor the TOR network in its entirety.   
+Bandito is monitoring system that utilises Nagios to monitor the TOR network in its entirety. 
 
 It is currently under active development and not production ready.
 
