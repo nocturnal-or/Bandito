@@ -3,29 +3,31 @@ Bandito is monitoring system that utilises Nagios to monitor the TOR network in 
 
 ## Getting Started
 
-You need to be somewhat conversant with Ansible, Tor, Nagios and Linux.
-
-Have a vanilla CentOS7/RHEL7 system at your disposal.
-
-[You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+You need to be conversant with Ansible, Tor, Nagios and CENTOS7 Linux.
 
 ### Prerequisites
 
-Have a vanilla CentOS7/RHEL7 system ready, preferably a minimal install, and with Ansible installed.
+You need to be conversant with Ansible, Tor (running a relay), Nagios and general CENTOS7 Linux administration.
 
-Install ansible as per the following:
+Have a vanilla CENTOS7 system at your disposal (with ansible installed), e.g.
 
 ```
 yum install ansible -y
 ```
 
+[You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+
 ### Installing
 
 1. Clone this repo
 
-2. There are variable definitions required prior to install:
+```
+git clone https://github.com/nocturnal-or/Bandito
+```
 
-See the following file
+2. There are variable definitions required prior to building:
+
+See the following (well documented) file
 
 ```
 vars/main.yml
@@ -37,15 +39,11 @@ vars/main.yml
 ansible-playbook site_bandito.yml
 ```
 
-4. Upon building, using the http_access credentials you defined in vars/main.yml, navigate a web browswer to:
-
-```
-http[s]://<server_name>>/bandito
-```
-
 ## Deployment
 
-Upon building, using the http_access credentials you defined in vars/main.yml, open a web browswer to 
+It's probably not a good idea to run this on the open internet without additional security controls in place. 
+
+Upon installing, using the http_access credentials you defined in vars/main.yml, open a web browswer to 
 
 ```
 http[s]://<server_name>>/bandito
