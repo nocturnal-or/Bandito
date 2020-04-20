@@ -7,15 +7,15 @@ You need to be conversant with Ansible, Tor, Nagios and CentOS7 Linux.
 
 ### Prerequisites
 
-You need to be conversant with Ansible, Tor (running a relay), Nagios and general Linux administration.
+* You need to be conversant with Ansible, Tor (running a relay), Nagios and general Linux administration.
 
-Have a vanilla CentOS7 system at your disposal (with ansible installed), e.g.
+* Have a vanilla CentOS7 system at your disposal (with ansible installed), e.g.
 
 ```
 yum install ansible -y
 ```
 
-[You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
+* [You will also need a TOR Relay configured and have it be connectable via STEM.](https://stem.torproject.org/tutorials/the_little_relay_that_could.html)
 
 ### Installing
 
