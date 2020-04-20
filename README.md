@@ -22,7 +22,7 @@ yum install ansible -y
 1. Clone this repo
 
 ```
-git clone https://github.com/nocturnal-or/Bandito
+git clone https://github.com/nocturnal-or/Bandito.git
 ```
 
 2. There are variable definitions required prior to building:
@@ -41,13 +41,13 @@ ansible-playbook site_bandito.yml
 
 ## Deployment
 
-It's probably not a good idea to run this on the open internet without additional security controls in place. 
-
 Upon installing, using the http_access credentials you defined in vars/main.yml, open a web browswer to 
 
 ```
 http[s]://<server_name>>/bandito
 ```
+
+It's probably not a good idea to run this on the open internet without additional security controls in place. 
 
 ## Contributing
 
