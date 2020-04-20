@@ -7,7 +7,7 @@
     state: enabled
 
 - name: Adding nagios user
-  shell: htpasswd -bc /usr/local/nagios/etc/htpasswd.users milk cookies
+  shell: htpasswd -bc /usr/local/nagios/etc/htpasswd.users {{ http_basic_user}} {{ http_basic_password }}
   notify: restart-httpd
 
 - name: Reload http
