@@ -2,6 +2,6 @@
 [bandito]
 127.0.0.1
 
-# Chaneg the IP to that of your tor relay. 
+# Change the IP to that of your tor relay. 
 [tor-relay]
 127.0.0.1
